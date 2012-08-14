@@ -1,3 +1,91 @@
+Version 1.7.2
+
+- Core animation is no longer disabled when calling delegate methods.
+- Fixed a potential divide-by-zero error when scrolling
+- Removed useDisplayLink option as the performance benefits are unclear
+- Added dragging, scrolling and decelerating properties (readonly)
+- iCarouselWrap property is now refreshed after inserting/deleting items
+- Added Autoscrolling Example
+- Added Fading Demo example
+
+Version 1.7.1
+
+- Fixed issue where reloading carousel with fewer items could sometimes crash
+- Fixed issue where scrollToItemAtIndex:duration: method would sometimes scroll to the wrong index
+
+Version 1.7
+
+- Renamed iCarouselTransformOption... values to "iCarouselOption", and extended the list of available options
+- Simplified carousel interface by deprecating a number of delegate methods in favour of the simpler iCarouselOption API
+- numberOfVisibleItems is now calculated automatically
+- Added Dynamic Downloads example using AsyncImageView
+- Added Dynamic Effects examples using FXImageView
+- Item view interaction area is now more precisely set on iOS
+- Fixed backface interaction issue for iCarouselTypeInvertedCylinder
+- It is now much simpler to implement alpha fading logic based on item offset 
+- Now supports item click events and centering on Mac OS (buttons and controls within item views still won't work correctly receive clicks however).
+- Added scrollToOffset: and scrollByOffset: methods
+- Disabled broken scrollwheel support for carousel on Mac OS
+- currentItemIndex property is now writable
+- scrollOffset property is now writable
+- Fixed bug with scrollByNumberOfItems where duration is 0
+- Switched CADisplayLink to use NSDefaultRunLoopMode, which is less likely to interfere with UIScrollViews, etc
+- Added Storyboard example
+
+Version 1.6.3
+
+- Added offsetForItemAtIndex: method
+- Fixed bug in reloadItemViewAtIndex:animated: method
+- Fixed Mac OS scrolling glitch when using numberOfVisibleViews
+- iCarousel now respects the layer.doubleSided property of item views
+- Added Basic and Multiple Carousels example projects
+
+Version 1.6.2
+
+- Fixed long-standing viewpointOffset bug
+- Fixed potential bug around not setting default carousel type
+- LLVM GCC compiler is no longer supported, Now requires Apple LLVM compiler
+- Upgraded to latest ARC Helper code
+
+Version 1.6.1
+
+- Added automatic support for ARC compile targets
+- Now compiles correctly again under LLVM GCC 4.2
+- Vertical Time Machine carousel is now right-way-up on Mac OS
+- Added Inverted Time Machine carousel type
+- Added dynamic reflections example
+- Fixed crashing bug in examples on iPad
+- Carousels now behave better with 1 or 2 items
+
+Version 1.6
+
+- Added support for item view recycling
+- Carousels can now be either horizontal or vertical
+- Added Wheel and Time Machine carousel types
+- Added new iCarouselTransformOption system for tweaking the standard carousel transforms without having to provide a completely bespoke implementation
+- Added ignorePerpendicularSwipes property
+- Fixed issue with scrolling immediately after reloading
+- Added useDisplayLink toggle to manually force use of NSTimer
+- Added support for the Chameleon iOS-to-Mac porting library
+- Removed the deprecated visibleViews property
+- Added carousel:alphaForViewAtItemWithOffset: delegate method for controlling view opacity
+- Added indexOfItemViewOrSubview: method to simplify handling of controls within  carousel item views
+- Deprecated/renamed some dataSource and delegate methods - check your projects for compatibility
+- Expanded examples and tests
+
+Version 1.5.8
+
+- Fixed bug in previous UITableCell fix
+- No longer gets stuck at a negative offset when inserting items into an empty carousel
+- Example app no longer crashes when inserting item into empty carousel
+- Better behaviour when reloading carousel
+
+Version 1.5.7
+
+- Fixed ARC compatibility issues with sorting logic
+- UISwitches, UISliders and UITableCells now work correctly with item views
+- Fixed bug in carousel:shouldSelectItemAtIndex: delegate logic
+
 Version 1.5.6
 
 - Added reloadItemAtIndex:animated: method.
