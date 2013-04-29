@@ -1,3 +1,13 @@
+Version 1.7.4
+
+- Fixed deprecation warnings when using Xcode 4.6
+- Fixed wide items in a vertical carousel getting incorrect hitboxes
+- Added podspec file
+
+Version 1.7.3
+
+- Moved ARCHelper macros into .m file to avoid affecting other classes
+
 Version 1.7.2
 
 - Core animation is no longer disabled when calling delegate methods.
